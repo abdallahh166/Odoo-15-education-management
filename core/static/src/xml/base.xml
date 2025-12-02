@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- vim:fdl=1: -->
+<templates id="template" xml:space="preserve">
+<t t-extend="Login">
+    <t t-jquery="img" t-operation="replace">
+    <img src='/core/static/src/img/banner.png'
+    width="180px" alt="LOGO"/>
+    </t>
+     <t t-jquery="div.oe_login_footer" t-operation="after">
+            <div class="oe_login_footer" style="top:250px">
+                <a href="https://www.futureacademyegypt.com/en/" target="_blank">Provided by <span>Seven Pictures</span></a>
+            </div>
+     </t>
+</t>
+<t t-extend="WebClient">
+    <t t-jquery="span.url" t-operation="replace">
+        <span class="url"><a id="support_link" href="https://www.futureacademyegypt.com/en/contact-us" target="_blank"></a></span>
+    </t>
+</t>
+</templates>

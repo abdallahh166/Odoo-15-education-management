@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_student_team_tree" model="ir.ui.view">
+            <field name="name">op.student.team.tree</field>
+            <field name="model">op.student.team</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Student Team Detail">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="project_name"/>
+                    <field name="student_name"/>
+                    <field name="faculty_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_op_student_team_form" model="ir.ui.view">
+            <field name="name">op.student.team.form</field>
+            <field name="model">op.student.team</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Student Team Detail">
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                        <group col="4" string="Students">
+                            <field name="student_name" colspan="4" nolabel="1"/>
+                        </group>
+                        <group col="4" string="Projects">
+                            <field name="project_name" colspan="4" nolabel="1"/>
+                        </group>
+                        <group col="4" string="Faculty">
+                            <field name="faculty_name" colspan="4" nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_op_student_team_search" model="ir.ui.view">
+            <field name="name">op.student.team.search</field>
+            <field name="model">op.student.team</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <search string="Student Team">
+                    <field name="student_name"/>
+                    <field name="faculty_name"/>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <newline/>
+                    <group expand="0" string="Group By...">
+                        <filter string="Name" name="group_by_name"
+                                domain="[]" context="{'group_by':'name'}"/>
+                        <filter string="Student Name" name="group_by_student_student_id"
+                                domain="[]" context="{'group_by':'student_name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_op_student_team_view">
+            <field name="name">Student Team Detail</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">op.student.team</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_op_student_team_search"/>
+
+        </record>
+    </data>
+</odoo>

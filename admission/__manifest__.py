@@ -1,0 +1,33 @@
+{
+    'name': "Future Admission",
+    'version': '15.0.1.0',
+    'license': 'LGPL-3',
+    'category': 'Education',
+    'sequence': 3,
+    'summary': "Manage Admissions""",
+    'complexity': "easy",
+    'author': 'Seven Pictures',
+    'website': 'https://www.futureacademyegypt.com/en/home',
+    'depends': ['core'],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/admission_sequence.xml',
+        'views/admission_register_view.xml',
+        'views/admission_view.xml',
+        'report/report_admission_analysis.xml',
+        'report/report_menu.xml',
+        'wizard/admission_analysis_wizard_view.xml',
+        'menus/op_menu.xml',
+    ],
+    'demo': [
+        'demo/admission_register_demo.xml',
+        'demo/admission_demo.xml',
+    ],
+    'test': [],
+    'images': [
+        'static/description/logoo.png',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}

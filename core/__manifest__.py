@@ -1,0 +1,65 @@
+{
+    'name': 'Future Core',
+    'version': '15.0.0.0',
+    'category': 'Education',
+    "sequence": 1,
+    'summary': 'Manage Students, Faculties and Education Institute',
+    'complexity': "easy",
+    'author': 'Seven Pictures',
+    'website': 'https://www.futureacademyegypt.com/en/home',
+    'depends': ['board', 'hr'],
+    'data': [
+        'security/op_security.xml',
+        'security/ir.model.access.csv',
+        'report/report_menu.xml',
+        'report/report_student_bonafide.xml',
+        'report/report_student_idcard.xml',
+        'wizard/faculty_create_employee_wizard_view.xml',
+        'wizard/faculty_create_user_wizard_view.xml',
+        'wizard/students_create_user_wizard_view.xml',
+        'views/department_view.xml',
+        'views/res_company_view.xml',
+        'views/student_view.xml',
+        'views/hr_view.xml',
+        'views/category_view.xml',
+        'views/course_view.xml',
+        'views/batch_view.xml',
+        'views/subject_view.xml',
+        'views/faculty_view.xml',
+        'views/subject_registration_view.xml',
+        'views/res_config_setting_view.xml',
+        'views/student_portal_view.xml',
+        'views/student_course_view.xml',
+        'views/op_academic_year_view.xml',
+        'views/op_academic_term_view.xml',
+        'views/project_view.xml',
+        'views/student_team_view.xml',
+
+        # 'data/ir_cron_data.xml',
+        'menu/openeducat_core_menu.xml',
+        'menu/faculty_menu.xml',
+        'menu/student_menu.xml',
+    ],
+    'css': [
+        'static/src/scss/base.scss'
+    ],
+    'qweb': [
+        'static/src/xml/base.xml',
+        'static/src/xml/dashboard_ext_openeducat.xml'
+    ],
+    'js': [],
+    'images': [
+        'static/description/title_icon.png',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+    'assets': {
+        'website.assets_frontend': [
+            '/core/static/src/scss/main.scss',
+        ],
+        'web.assets_backend': [
+            '/core/static/src/scss/style.scss',
+        ],
+    },
+}

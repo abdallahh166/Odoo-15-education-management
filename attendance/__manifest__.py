@@ -1,0 +1,32 @@
+{
+    'name': 'Future Attendance',
+    'version': '15.0.1.0',
+    'license': 'LGPL-3',
+    'category': 'Education',
+    "sequence": 3,
+    'summary': 'Manage Attendances',
+    'complexity': "easy",
+    'author': 'Seven Pictures',
+    'website': 'https://www.futureacademyegypt.com/en/home',
+    'depends': ['timetable'],
+    'data': [
+        'security/op_security.xml',
+        'security/ir.model.access.csv',
+        'data/attendance_sheet_sequence.xml',
+        'wizards/student_attendance_wizard_view.xml',
+        'views/attendance_register_view.xml',
+        'views/attendance_sheet_view.xml',
+        'views/attendance_line_view.xml',
+        'views/attendance_type_view.xml',
+        'views/attendance_session_view.xml',
+        'report/student_attendance_report.xml',
+        'report/report_menu.xml',
+        'menus/op_menu.xml'
+    ],
+    'images': [
+        'static/description/attendance_banner.jpg',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}
