@@ -2,6 +2,8 @@
 
 This repository contains my graduation project: an **education management system** built on **Odoo 15**.  
 It digitizes core processes of an educational institute such as admissions, student records, attendance, classrooms, and timetables.
+**[View Project Presentation](https://sevenpic.my.canva.site/technology-in-education-technology-presentation)
+** – Technology in Education presentation showcasing the project overview and features.
 
 ### Features
 
